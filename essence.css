@@ -1,0 +1,512 @@
+/* micro.css - Classless CSS Framework v1.0.0 */
+
+
+:root {
+  --bg: #f9fafb;
+  --fg: #111827;
+  --primary: #2563eb;
+  --secondary: #e5e7eb;
+  --radius: 6px;
+  --spacing: 1rem;
+  --font: system-ui, sans-serif;
+  --max-width: 60ch;
+  --code-bg: #f3f4f6;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px dashed var(--primary);
+  outline-offset: 2px;
+}
+
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+
+@media (max-width: 600px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111827;
+    --fg: #f9fafb;
+    --primary: #3b82f6;
+    --secondary: #374151;
+    --code-bg: #1f2937;
+  }
+}
+
+/* RESET & BASE */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  padding: var(--spacing);
+  padding-bottom: 4rem;
+}
+
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+p, ul, ol, blockquote, pre {
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  padding-left: 1.25rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--secondary);
+  margin: 2rem 0;
+}
+
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* FORMS */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  padding: 0.5em 1em;
+  margin-top: 0.5em;
+  border: 1px solid var(--secondary);
+  border-radius: var(--radius);
+  background-color: white;
+  color: var(--fg);
+}
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 0.25em;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+button:hover {
+  background-color: #1e40af;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* FORM STRUCTURE */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* TABLES */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+th, td {
+  border: 1px solid var(--secondary);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+/* BLOCKQUOTES & CODE */
+blockquote {
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+  color: #4b5563;
+  font-style: italic;
+}
+code {
+  background: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: monospace;
+}
+pre {
+  background: var(--code-bg);
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: var(--radius);
+}
+
+/* MEDIA */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* UTILITIES (Optional) */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+.card {
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: var(--secondary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing);
+}
+
+header, nav, main, section, article, footer {
+  display: block;
+  margin-bottom: var(--spacing);
+}
+/* Full-width wrappers */
+header, nav, footer {
+  width: 100%;
+  background-color: var(--secondary);
+}
+
+header .inner {
+
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: var(--secondary);
+  color: var(--fg);
+  text-align: center;
+  padding: auto;
+  width: 100%;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem var(--spacing);
+  background-color: var(--secondary);
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul:first-child {
+  margin-right: auto;
+}
+
+nav a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+button, input, select, textarea {
+  line-height: 1.2;
+}
+
+
+nav a:focus-visible,
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Stack vertically in narrow view */
+@media (max-width: 600px) {
+  nav, nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  nav ul + ul {
+    margin-left: 0;
+  }
+}
+
+
+
+section, article {
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  background-color: var(--bg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+a, button, input, select, textarea {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --fg: #111827;
+  --primary: #2563eb;
+  --secondary: #f3f4f6;
+  --code-bg: #f9fafb;
+}
+[data-theme="dark"] {
+  --bg: #111827;
+  --fg: #f9fafb;
+  --primary: #3b82f6;
+  --secondary: #1f2937;
+  --code-bg: #1e293b;
+}
+
+[data-theme="terminal"] {
+  --bg: #0d0f12;              /* Deep cyber black */
+  --fg: #39ff14;              /* Hacker green */
+  --primary: #1aff66;         /* Muted neon green (less eye strain) */
+  --secondary: #111b1f;       /* Dark cyan-black for containers */
+  --code-bg: #0a0e14;         /* Subtle indigo-black for code blocks */
+  
+  --link-hover: #00e676;      /* Gentle green hover */
+  --border: #00c76f;          /* Muted neon border */
+  --button-hover: #14994d;    /* Calm green hover effect */
+  
+  --shadow: 0 0 6px rgba(26, 255, 102, 0.2);  /* Softer glow */
+  --radius: 6px;
+  --font: 'Courier New', monospace;
+}
+
+
+
+/* EARTHSTONE - Warm, editorial enterprise */
+[data-theme="earth"] {
+  --bg: #fefae0;
+  --fg: #3c3c2b;
+  --primary: #9c7e65;
+  --secondary: #e6ccb2;
+  --code-bg: #f4ebdb;
+}
+
+/* FROSTBYTE - Modern clean enterprise theme */
+[data-theme="frost"] {
+  --bg: #e5e9f0;
+  --fg: #2e3440;
+  --primary: #5e81ac;
+  --secondary: #d8dee9;
+  --code-bg: #eceff4;
+}
+
+/* NIGHTDRIVE - Inspired by Dracula, modern dark */
+[data-theme="midnight"] {
+  --bg: #1e1f2c;
+  --fg: #f8f8f2;
+  --primary: #bd93f9;
+  --secondary: #44475a;
+  --code-bg: #353748;
+}
+
+/* MONOKAI XT - Developer IDE look-alike */
+[data-theme="monokai"] {
+  --bg: #272822;
+  --fg: #f8f8f2;
+  --primary: #66d9ef;
+  --secondary: #49483e;
+  --code-bg: #1e1f1c;
+}
+
+/* CORAL BLUSH - Soft light business theme */
+[data-theme="coral"] {
+  --bg: #fffafa;
+  --fg: #333333;
+  --primary: #ff4d6d;
+  --secondary: #ffeaea;
+  --code-bg: #fff0f5;
+}
+
+/* AMBERFIELD - Sophisticated warm beige */
+[data-theme="amber"] {
+  --bg: #fdf6e3;
+  --fg: #586e75;
+  --primary: #b58900;
+  --secondary: #eee8d5;
+  --code-bg: #f5f1d6;
+}
+
+/* INKSPACE - Deep contrast professional dark */
+[data-theme="ink"] {
+  --bg: #002b36;
+  --fg: #93a1a1;
+  --primary: #2aa198;
+  --secondary: #073642;
+  --code-bg: #001f27;
+}
+
+/* TROPICAIR - Bright coastal enterprise */
+[data-theme="tropic"] {
+  --bg: #e0fff4;
+  --fg: #054231;
+  --primary: #16c79a;
+  --secondary: #b2f5ea;
+  --code-bg: #d1fae5;
+}
+
+
+[data-theme="aquaflo"] {
+  --bg: #0e0e10;           /* Deep black-blue background */
+  --fg: #e0f7fa;           /* Soft aqua text for better contrast */
+  --primary: #3b82f6;      /* Bright, accessible blue */
+  --secondary: #164e63;    /* Deep cyan-teal for UI blocks and accents */
+  --code-bg: #1a1b2f;      /* Muted indigo-dark background for code blocks */
+  
+  --link-hover: #60a5fa;   /* Slightly lighter primary for hover */
+  --border: #22d3ee;       /* Bright cyan border accent */
+  --button-hover: #2563eb; /* Deeper blue for button hover */
+
+  --shadow: 0 4px 12px rgba(34, 211, 238, 0.15); /* Subtle glow for cards/buttons */
+  --radius: 8px;           /* Slightly rounder corners for a softer look */
+}
+
+/* AURORABLUE - Inspired by Nord/modern SaaS */
+[data-theme="aurorablue"] {
+  --bg: #2e3440;
+  --fg: #e5e9f0;
+  --primary: #88c0d0;
+  --secondary: #3b4252;
+  --code-bg: #434c5e;
+}
+
+/* NEONDRIFT - Futuristic Neon, Cyberpunk vibe */
+[data-theme="neondrift"] {
+  --bg: #0f0f1a;
+  --fg: #f8f8ff;
+  --primary: #ff00ff;
+  --secondary: #2d0039;
+  --code-bg: #1a0e2e;
+}
+
+/* SOLARAIR - Light Solarized style, warm minimalist */
+[data-theme="solarair"] {
+  --bg: #fdf6e3;
+  --fg: #586e75;
+  --primary: #268bd2;
+  --secondary: #eee8d5;
+  --code-bg: #f4f1d6;
+}
+
+/* VINTONE - Gruvbox dark remix with vintage pop */
+[data-theme="vintone"] {
+  --bg: #1d2021;
+  --fg: #ebdbb2;
+  --primary: #fe8019;
+  --secondary: #3c3836;
+  --code-bg: #282828;
+}
+
+/* CLOUDMOON - Inspired by Catppuccin Mocha, gentle pastel night */
+[data-theme="cloudmoon"] {
+  --bg: #1e1e2e;
+  --fg: #cdd6f4;
+  --primary: #89b4fa;
+  --secondary: #313244;
+  --code-bg: #181825;
+}
+
+/* TOKYOSYNC - Tokyo Night dark tech flavor */
+[data-theme="tokyosync"] {
+  --bg: #1a1b26;
+  --fg: #c0caf5;
+  --primary: #7aa2f7;
+  --secondary: #24283b;
+  --code-bg: #16161e;
+}
