@@ -1,0 +1,7 @@
+Copyright (c) 2025 Syed Khuzema Ali
+
+This CSS framework (essence.css) is proprietary and confidential.
+You may not copy, redistribute, or reuse any portion of the source code
+without express written permission.
+
+Contact: syedkhuzemaaaligilani@gmail.com
