@@ -14,6 +14,27 @@ A lightweight, classless CSS framework focused on clean design, semantic HTML, a
 - :bulb: **Developer-Friendly**: Styled forms, tables, code blocks, and utilities  
 - :lock: **Minimal & Secure**: No JS, no tracking
 
+## Themes
+
+**light**
+**dark**
+**earth**
+**terminal**
+**frost**
+**midnight**
+**monokai**
+**coral**
+**amber**
+**ink**
+**tropic**
+**aquaflo**
+**aurorablue**
+**neondrift**
+**solarair**
+**vintone**
+**cloudmoon**
+**tokyosync**
+
 ## 🚀 Getting Started
 
 1. **Use via CDN (recommended)**
