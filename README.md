@@ -16,24 +16,24 @@ A lightweight, classless CSS framework focused on clean design, semantic HTML, a
 
 ## Themes
 
--**light**
--**dark**
--**earth**
--**terminal**
--**frost**
--**midnight**
--**monokai**
--**coral**
--**amber**
--**ink**
--**tropic**
--**aquaflo**
--**aurorablue**
--**neondrift**
--**solarair**
--**vintone**
--**cloudmoon**
--**tokyosync**
+- **light**
+- **dark**
+- **earth**
+- **terminal**
+- **frost**
+- **midnight**
+- **monokai**
+- **coral**
+- **amber**
+- **ink**
+- **tropic**
+- **aquaflo**
+- **aurorablue**
+- **neondrift**
+- **solarair**
+- **vintone**
+- **cloudmoon**
+- **tokyosync**
 
 ## 🚀 Getting Started
 
