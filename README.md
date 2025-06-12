@@ -16,4 +16,4 @@ A lightweight, classless CSS framework focused on clean design, semantic HTML, a
 1. **Use via CDN (recommended)**
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Khuzema-code/essence/essence.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Khuzema-code/Broad.css/Broad.css">
